@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Buses</title></head>
+<body>
+  <h2>Available Buses</h2>
+<h2>Available Buses</h2>
+<% if(buses.length === 0) { %>
+  <p>No buses available.</p>
+<% } else { %>
+  <ul>
+    <% buses.forEach(bus => { %>
+      <li>
+        <strong><%= bus.name %></strong> from <%= bus.from %> to <%= bus.to %> on <%= bus.date.toDateString() %><br>
+        Seats Available: <%= bus.seats %> | Price: $<%= bus.price %><br>
+        <a href="/booking/<%= bus._id %>">Book Now</a>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>
+  <a href="/">Back to Home</a>
+</body>
+</html>

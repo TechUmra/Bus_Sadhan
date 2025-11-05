@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head><title>My Bookings</title></head>
+<body>
+  <h2>My Bookings</h2>
+  <% bookings.forEach(booking => { %>
+    <p>Bus: <%= booking.bus.name %> - Seats: <%= booking.seats %> - Total: $<%= booking.totalPrice %></p>
+  <% }); %>
+  <a href="/">Back to Home</a>
+</body>
+</html>
